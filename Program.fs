@@ -1,9 +1,15 @@
-﻿open Client
+﻿open Fable.Core
+open Thoth.Json
 
-let _ = Client.direct ()
+// NOTE: with StringEnum, below prints "success: Invalid"
+//       without StringEnum, it prints "The following `failure` occurred with the decoder: Cannot find case Invalid in Program.State"
+[<StringEnum>]
+type State =
+    | On
+    | Off
 
-let anon = Client.makeAnon ()
-let _ = anon.load ()
+let inline decoder<'T> = Decode.Auto.generateDecoder<'T> ()
 
-let sub = Client.makeSub ()
-let _ = sub.load ()
+match Decode.fromString decoder<State> "\"Invalid\"" with
+| Error error -> printfn "failure: %s" error
+| Ok value -> printfn "success: %s" (value.ToString())
