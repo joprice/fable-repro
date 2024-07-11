@@ -9,7 +9,6 @@
     <None Include="paket.references" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <Import Project=".paket\Paket.Restore.targets" />
