@@ -4,4 +4,6 @@ storage: none
 nuget Fable.Core
 nuget FSharp.Core
 nuget Thoth.Json
+nuget Thoth.Json.Core
+nuget Thoth.Json.Javascript
 nuget Thoth.Json.Net

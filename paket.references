@@ -2,3 +2,5 @@ Fable.Core
 FSharp.Core
 Thoth.Json
 Thoth.Json.Net
+Thoth.Json.Core
+Thoth.Json.Javascript
