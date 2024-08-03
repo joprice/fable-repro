@@ -6,6 +6,7 @@
     <RootNamespace>fable_repro</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Test.fs" />
     <Compile Include="Client.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
