@@ -4,3 +4,5 @@ storage: none
 nuget Fable.Core
 nuget FSharp.Core
 nuget Fable.Promise
+nuget Thoth.Json.Core
+nuget Thoth.Json.JavaScript
