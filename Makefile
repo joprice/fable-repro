@@ -4,7 +4,8 @@ watch:
 
 build:
 	dotnet clean && \
-		dotnet fable --runWatch node Program.fs.js
+		dotnet fable clean --yes && \
+		dotnet fable --test:MSBuildCracker --noCache --runScript
 
 watch-release:
 	dotnet fable watch -c Release --runWatch node Program.fs.js 
